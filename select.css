@@ -52,19 +52,19 @@
 }
 
 /* IE9 hack to hide the arrow */
-/* @media screen and (min-width:0\0) { */
-/*   .bare-select { */
-/*     z-index: 1; */
-/*     padding: .5rem 1.5rem .5rem 1rem; */
-/*   } */
-/*  */
-/*   .bare-select:hover, */
-/*   .bare-select:focus, */
-/*   .bare-select:active { */
-/*     color: #555; */
-/*     background-color: #eee; */
-/*   } */
-/* } */
+@media screen and (min-width:0\0) {
+  .select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+
+  .select:hover,
+  .select:focus,
+  .select:active {
+    color: #555;
+    background-color: #eee;
+  }
+}
 
 /* Hide the arrow in IE10 and up */
 .select::-ms-expand {
