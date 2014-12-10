@@ -1,4 +1,4 @@
-.bare-select {
+.select {
   position: relative;
   height: 36px;
   border: none;
@@ -18,13 +18,11 @@
   background-color: #e0e0e0;
 
 
-
   display: inline-block;
   padding: 0 .4em 0 .4em;
   margin-bottom: 2em;
   vertical-align: middle;
   border-radius: 3px;
-
 
 
   font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
@@ -37,36 +35,40 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+
+
+  /* dev */
+  max-width: 400px;
 }
 
 /* Undo the Firefox inner focus ring */
-.bare-select:focus:-moz-focusring {
+.select:focus:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
 
 /* Focus */
-.bare-select:focus {
+.select:focus {
   box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
 }
 
 /* IE9 hack to hide the arrow */
-@media screen and (min-width:0\0) {
-  .bare-select {
-    z-index: 1;
-    padding: .5rem 1.5rem .5rem 1rem;
-  }
-
-  .bare-select:hover,
-  .bare-select:focus,
-  .bare-select:active {
-    color: #555;
-    background-color: #eee;
-  }
-}
+/* @media screen and (min-width:0\0) { */
+/*   .bare-select { */
+/*     z-index: 1; */
+/*     padding: .5rem 1.5rem .5rem 1rem; */
+/*   } */
+/*  */
+/*   .bare-select:hover, */
+/*   .bare-select:focus, */
+/*   .bare-select:active { */
+/*     color: #555; */
+/*     background-color: #eee; */
+/*   } */
+/* } */
 
 /* Hide the arrow in IE10 and up */
-.bare-select::-ms-expand {
+.select::-ms-expand {
   display: none;
 }
 
