@@ -162,6 +162,12 @@
   }
 }
 
+/* Hide the arrow in IE10 and up */
+.bare-select::-ms-expand {
+  display: none;
+}
+
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
