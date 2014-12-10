@@ -147,6 +147,21 @@
   box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
 }
 
+/* IE9 hack to hide the arrow */
+@media screen and (min-width:0\0) {
+  .bare-select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+
+  .bare-select:hover,
+  .bare-select:focus,
+  .bare-select:active {
+    color: #555;
+    background-color: #eee;
+  }
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
