@@ -1,79 +1,51 @@
+/* Heavily influenced by wtfforms, Mailchimp, and Foundation */
+
 .select {
   position: relative;
-  height: 36px;
-  border: none;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .01em;
-  border-collapse: separate;
-  padding: 0 39px 0 18px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
   background-position: right center;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: 30px auto;
-  width: 100%;
-  color: #595959;
-  background-color: #e0e0e0;
-
+  /* outline: none; */
 
   display: inline-block;
-  padding: 0 .4em 0 .4em;
-  margin-bottom: 2em;
   vertical-align: middle;
-  border-radius: 3px;
-
-
-  font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: normal;
 
   cursor: pointer;
 
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-
-
-  /* dev */
-  max-width: 400px;
 }
 
-/* Undo the Firefox inner focus ring */
+/* theme */
+.select {
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #fcfcfc;
+  border-color: #d7d7d7;
+  color: #3f3f3f;
+  height: 32px;
+  font-size: 15px;
+  padding: 0 20px 0 10px;
+}
+
+/* FF: remove dotted inner focus ring */
 .select:focus:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
 
-/* Focus */
-.select:focus {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
-}
+/* IE10+: hide expand-arrow */
+.select::-ms-expand { display: none }
 
-/* IE9 hack to hide the arrow */
+/* IE9: make expand-arrow look as reasonable as possible */
 @media screen and (min-width:0\0) {
   .select {
     z-index: 1;
-    padding: .5rem 1.5rem .5rem 1rem;
-  }
-
-  .select:hover,
-  .select:focus,
-  .select:active {
-    color: #555;
-    background-color: #eee;
+    padding: .25rem !important;
+    background-image: none !important;
   }
 }
-
-/* Hide the arrow in IE10 and up */
-.select::-ms-expand {
-  display: none;
-}
-
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-{
