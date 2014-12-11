@@ -1,0 +1,23 @@
+{
+  "name": "select.css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chantastic/select.css",
+  "authors": [
+    "Michael Chan <mijoch@gmail.com>"
+  ],
+  "description": "Styled select for most modern browers and some old",
+  "main": "select.css",
+  "keywords": [
+    "select",
+    "css",
+    "forms"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
