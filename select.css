@@ -1,51 +1,65 @@
-/* Heavily influenced by wtfforms, Mailchimp, and Foundation */
-
 .select {
-  position: relative;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
-  background-position: right center;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 30px auto;
-  /* outline: none; */
+    position: relative;
 
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
 
-  cursor: pointer;
+    cursor: pointer;
+    vertical-align: middle;
 
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    background-color: transparent;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 32px auto;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 }
 
-/* theme */
+/* Theme */
+
 .select {
-  border-radius: 3px;
-  border-width: 1px;
-  border-style: solid;
-  background-color: #fcfcfc;
-  border-color: #d7d7d7;
-  color: #3f3f3f;
-  height: 32px;
-  font-size: 15px;
-  padding: 0 20px 0 10px;
+    font-size: 15px;
+
+    height: 32px;
+    width: 100%;
+    padding: 0 20px 0 10px;
+
+    color: #444;
+    color: #3f3f3f;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    border-radius: 3px;
 }
 
-/* FF: remove dotted inner focus ring */
+/* Hacks */
+
+/* FF(all): remove dotted inner focus ring */
 .select:focus:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
 
-/* IE10+: hide expand-arrow */
+/* FF(<35): remove background-image where appearance: none is not supported */
+_:-moz-tree-row(hover), .select { background-image: none }
+
+/* FF(35+): add default background-image back where appearance: none is * supperted*/
+@supports (-moz-appearance:none) and (mask-type:alpha) {
+  .select {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+  }
+}
+
+/* IE(10+): hide expand-arrow */
 .select::-ms-expand { display: none }
 
-/* IE9: make expand-arrow look as reasonable as possible */
+/* IE(9/10): make expand-arrow look as reasonable as possible */
 @media screen and (min-width:0\0) {
   .select {
     z-index: 1;
     padding: .25rem !important;
-    background-image: none !important;
   }
 }
+
+/* under the influence of wtfforms, Mailchimp, and Foundation */
