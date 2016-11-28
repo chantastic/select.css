@@ -31,11 +31,11 @@ It's been 2 years now. So they could have totally moved on.
 
 #### NPM
 
-`npm install select.css@0.0.1`
+`npm install select.css@0.1.0`
 
 #### Script tag
 
-`<link rel="stylesheet" href="https://unpkg.com/select.css@0.0.1" />`
+`<link rel="stylesheet" href="https://unpkg.com/select.css@0.1.0" />`
 
 ## Use
 

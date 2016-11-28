@@ -1,7 +1,7 @@
 {
   "name": "select.css",
-  "version": "0.0.1",
-  "description": "Styled select for most modern browers and some old",
+  "version": "0.1.0",
+  "description": "A scalable, style-able select.",
   "main": "select.css",
   "style": "select.css",
   "scripts": {
