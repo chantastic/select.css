@@ -5,29 +5,19 @@ background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53M
 background-position:right center;
 background-color:transparent;
 background-repeat:no-repeat;
-background-size:30px auto;
+background-size:1.5em auto;
 display:inline-block;
 vertical-align:middle;
 cursor:pointer;
 -webkit-appearance:none;-moz-appearance:none;appearance:none;
-}
-/* theme */
-.select{
-border-radius:3px;
+border-radius:.25em;
 border-width:1px;
 border-style:solid;
+height:2em;
+font-size:1em;
+padding:0 1em 0 .5em;
+/* default theme */
 background-color:#fcfcfc;
 border-color:#d7d7d7;
 color:#3f3f3f;
-height:32px;
-font-size:15px;
-padding:0 20px 0 10px;
-}
-/* FF: remove dotted inner focus ring */
-.select:focus:-moz-focusring {color:transparent;text-shadow:0 0 0 #000}
-/* IE10+: hide expand-arrow */
-.select::-ms-expand{display:none}
-/* IE9: make expand-arrow look as reasonable as possible */
-@media screen and (min-width:0\0) {
-.select{z-index: 1;padding: .25rem !important;background-image: none !important;}
 }
