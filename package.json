@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Styled select for most modern browers and some old",
   "main": "select.css",
+  "style": "select.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
