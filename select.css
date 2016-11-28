@@ -5,7 +5,7 @@ background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53M
 background-position:right center;
 background-color:transparent;
 background-repeat:no-repeat;
-background-size:1.5em auto;
+background-size:2em auto;
 display:inline-block;
 vertical-align:middle;
 cursor:pointer;
@@ -15,7 +15,7 @@ border-width:1px;
 border-style:solid;
 height:2em;
 font-size:1em;
-padding:0 1em 0 .5em;
+padding:0 2em 0 .5em;
 /* default theme */
 background-color:#fcfcfc;
 border-color:#d7d7d7;
